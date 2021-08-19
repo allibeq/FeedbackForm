@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User form</title>
+</head>
+<body>
+    <div class="form">
+        <form action="#" id="form">
+            <h1 class="titleForm">Обратная связь</h1>
+            <div class="itemForm">
+                <label for="formName" class="lableForm">Имя*</label>
+                <input type="text" id="name" name="name" class="inputForm requiredElem">
+            </div>
+
+            <div class="itemForm">
+                <label for="formEmail" class="lableForm">Email</label>
+                <input type="text" id="email" name="email" class="inputForm emailInput requiredElem">                
+            </div>
+
+            <div class="itemForm">
+                <label for="formPhone" class="lableForm">Телефон</label>
+                <input type="text" id="phone" name="phone" class="inputForm requiredElem phoneInput">                
+            </div>
+
+            <div class="itemForm">
+                <label for="formMessage" class="lableForm">Сообщение*</label>
+                <textarea name="message" id="message" class="inputForm requiredElem"></textarea>
+            </div>
+
+            <div class="itemForm">
+            <p class="consentString">Отправляя форму, вы соглашаетесь с пользовательским соглашением и политикой конфиденциальности.</p>
+            </div>
+            
+            <button type="submit" class="buttonForm">Отправить</button>
+
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
