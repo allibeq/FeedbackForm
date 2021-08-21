@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User form</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
   <body>
-    <main>
-      <button id="openWindow" class="feedbackButton">Обратная связь</button>
-      <div id="modalWindow" class="modalWindow">
-        <div class="form">
-          <form action="#" id="form">
-            <h1 class="titleForm">Обратная связь</h1>
-            <div class="itemForm">
-              <label for="name" class="lableForm">Имя*</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="inputForm requiredElem"
-              />
-            </div>
+    <form id="form">
+      <div class="title">
+        <h2>Обратная связь</h2>
+      </div>
 
-            <div class="itemForm">
-              <label for="email" class="lableForm">Email</label>
-              <input
-                type="text"
-                id="email"
-                name="email"
-                class="inputForm emailInput requiredElem mayBe"
-              />
+      <div class="nameEmailContainer">
+        <div class="smallFields">
+          <div class="inputField">
+            <label for="name">Имя</label>
+            <input
+              name="name"
+              id="name"
+              placeholder="Ваше имя"
+              class="requiredElem inputForm"
+            />
+            <div>
+              <label class="errorLabel" for="name">Введите имя</label>
             </div>
+          </div>
 
-            <div class="itemForm">
-              <label for="phone" class="lableForm">Телефон</label>
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                class="inputForm requiredElem phoneInput mayBe"
-              />
+          <div class="inputField inputFieldEmail">
+            <label for="email">Эл. Почта</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email@mail.com"
+              class="emailInput requiredElem inputForm"
+            />
+            <div>
+              <label class="errorLabel" for="name"
+                >Проверьте введенный email</label
+              >
             </div>
-
-            <div class="itemForm">
-              <label for="message" class="lableForm">Сообщение*</label>
-              <textarea
-                name="message"
-                id="message"
-                class="inputMessage requiredElem"
-              ></textarea>
-            </div>
-
-            <div class="itemForm">
-              <p class="consentString">
-                Отправляя форму, вы соглашаетесь с пользовательским соглашением
-                и политикой конфиденциальности.
-              </p>
-            </div>
-
-            <button id="button" type="submit" class="buttonForm">
-              Отправить
-            </button>
-            <button id="closeButton" type="submit" class="buttonForm">
-              Закрыть
-            </button>
-          </form>
+          </div>
+        </div>
+        <div class="inputField">
+          <label for="phone">Телефон</label>
+          <input
+            name="phone"
+            id="phone"
+            placeholder="+7 (XXX) XXX-XX-XX"
+            class="phoneInput requiredElem inputForm"
+          />
+          <div>
+            <label class="errorLabel" for="name"
+              >Проверьте введенный телефон</label
+            >
+          </div>
         </div>
       </div>
-    </main>
+
+      <div class="inputField messageField">
+        <label for="message">Сообщение</label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Текст сообщения"
+          wrap="off"
+          cols="30"
+          rows="5"
+          class="requiredElem inputForm"
+        ></textarea>
+        <div>
+          <label class="errorLabel" for="name">Введите сообщение</label>
+        </div>
+      </div>
+
+      <p>
+        Отправляя форму вы соглашаетесь с
+        <a href="#">пользовательским соглашением</a>
+        и
+        <a href="#">политикой конфиденциальности</a>
+      </p>
+      <div class="buttonSubmit">
+        <button type="submit">Отправить</button>
+      </div>
+    </form>
     <script src="script.js"></script>
   </body>
 </html>
